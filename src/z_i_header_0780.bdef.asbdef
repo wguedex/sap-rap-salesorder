@@ -1,0 +1,25 @@
+unmanaged implementation in class zcl_bd_salesorder_0780 unique;
+
+define behavior for Z_I_HEADER_0780 alias Header
+{
+
+  field ( readonly ) ordernumber;
+
+  create;
+  update;
+  delete;
+
+  association _Items { create; }
+
+}
+
+define behavior for Z_I_ITEMS_0780 alias Items
+{
+
+  create;
+  update;
+  delete;
+  field ( readonly ) Ordernumber;
+  field ( readonly ) positionnumber;
+  association _Header;
+}

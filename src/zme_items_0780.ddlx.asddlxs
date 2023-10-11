@@ -1,0 +1,118 @@
+@Metadata.layer: #CORE
+annotate view Z_C_ITEMS_0780 with
+{
+  @UI.facet: [
+  {type: #COLLECTION, position: 10, id: 'SoItem', label: 'Sales Order Item'},
+  {type: #FIELDGROUP_REFERENCE, position: 10, targetQualifier: 'SoItem1',parentId: 'SoItem', isSummary: true, isPartOfPreview: true},
+  {type: #FIELDGROUP_REFERENCE, position: 20, targetQualifier: 'SoItem2',parentId: 'SoItem', isSummary: true, isPartOfPreview: true}
+  ]
+
+  @UI: {
+
+  lineItem: [ { position: 10, importance: #HIGH } ],
+
+  fieldGroup: [{qualifier: 'SoItem1',position: 10,importance: #HIGH }]
+
+  }
+  @EndUserText.label: 'Order number'
+  Ordernumber;
+
+
+  @UI: {
+  lineItem: [ { position: 20, importance: #HIGH } ],
+  fieldGroup: [{qualifier: 'SoItem1',position: 20,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Position'
+  Positionnumber;
+
+  @UI : {
+  lineItem: [{ position: 30, importance: #MEDIUM,
+  label: 'Product name' }],
+  fieldGroup: [{qualifier: 'SoItem2',position: 30,importance: #HIGH }], 
+  identification: [{ position: 30 }]
+  }
+  @EndUserText.label: 'Product name'
+  Name;
+
+  @UI : {
+  lineItem: [{ position: 40, importance: #MEDIUM,
+  label: 'Description' }],
+  identification: [{ position: 40 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 40,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Description product'
+  Description;
+
+  @UI : {
+  lineItem: [{ position: 50, importance: #MEDIUM,
+  label: 'Release date' }],
+  identification: [{ position: 50 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 50,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Release date'
+  Releasedate;
+
+  @UI : {
+  lineItem: [{ position: 60, importance: #MEDIUM,
+  label: 'Discontinued date' }],
+  identification: [{ position: 60 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 60,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Discontinued date'
+  Discontinueddate;
+
+  @UI : {
+  lineItem: [{ position: 70, importance: #MEDIUM,
+  label: 'Price' }],
+  identification: [{ position: 70 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 70,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Price'
+  Price;
+
+  @UI : {
+  lineItem: [{ position: 80, importance: #MEDIUM,
+  label: 'Height' }],
+  identification: [{ position: 80 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 80,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Height'
+  Height;
+
+  @UI : {
+  lineItem: [{ position: 90, importance: #MEDIUM,
+  label: 'Width' }],
+  identification: [{ position: 90 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 90,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Width'
+  Width;
+
+  @UI : {
+  lineItem: [{ position: 100, importance: #MEDIUM,
+  label: 'Depth' }],
+  identification: [{ position: 100 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 100,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Depth'
+  Depth;
+
+  @UI : {
+  lineItem: [{ position: 110, importance: #MEDIUM,
+  label: 'Quantity' }],
+  identification: [{ position: 110 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 110,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Quantity'
+  Quantity;
+
+  @UI : {
+  lineItem: [{ position: 120, importance: #MEDIUM,
+  label: 'Unit of measure' }],
+  identification: [{ position: 120 }], 
+  fieldGroup: [{qualifier: 'SoItem2',position: 120,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Unit of measure'
+  Unitofmeasure;
+
+}

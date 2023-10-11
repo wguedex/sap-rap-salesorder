@@ -1,0 +1,118 @@
+@Metadata.layer: #CORE 
+
+@UI.headerInfo: {
+  typeName: 'Sales Order',
+  typeNamePlural: 'Sales Orders',
+  title: {
+    value: 'Ordernumber',
+    type: #STANDARD
+  },
+  description: {
+    value: 'Email',
+    type: #STANDARD
+  }
+}
+
+annotate view Z_C_HEADER_0780 with
+{
+
+  @UI.facet: [
+  {
+  id: 'GeneralData',
+  type: #COLLECTION,
+  position: 10,
+  label: 'Sales Order Header'
+  },
+
+  {
+  type: #FIELDGROUP_REFERENCE,
+  position: 10,
+  targetQualifier: 'GeneralData1',
+  parentId: 'GeneralData',
+  isSummary: true,
+  isPartOfPreview: true
+  },
+
+  {
+  type: #FIELDGROUP_REFERENCE,
+  position: 20,
+  targetQualifier: 'GeneralData2',
+  parentId: 'GeneralData',
+  isSummary: true,
+  isPartOfPreview: true
+  },
+
+  {
+  id: 'SOItem',
+  purpose: #STANDARD,
+  type: #LINEITEM_REFERENCE,
+  label: 'Sales Order Item',
+  position: 10,
+  targetElement: '_Items'
+  }
+  ]
+
+  @UI: {
+  lineItem: [ { position: 10, importance: #HIGH } ],
+  selectionField: [{position: 10 }],
+  fieldGroup: [{qualifier: 'GeneralData1',position: 10,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Order number'
+  Ordernumber;
+
+  @UI: {
+  lineItem: [ { position: 20, importance: #HIGH } ],
+  selectionField: [{position: 20 }],
+  fieldGroup: [{qualifier: 'GeneralData2',position: 20,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Email'
+  Email;
+
+  @UI : {
+  lineItem: [{ position: 30, importance: #HIGH }],
+  fieldGroup: [{qualifier: 'GeneralData2',position: 30,importance: #HIGH }]
+  }
+  @EndUserText.label: 'First name'
+  Firstname;
+
+  @UI : {
+  lineItem: [{ position: 40, importance: #HIGH }],
+  identification: [{ position: 40 }], 
+  fieldGroup: [{qualifier: 'GeneralData2',position: 40,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Last name'
+  Lastname;
+
+  @UI : {
+  lineItem: [{ position: 50, importance: #MEDIUM }],
+  identification: [{ position: 50 }], 
+  fieldGroup: [{qualifier: 'GeneralData2',position: 50,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Country'
+  Country;
+
+  @UI : {
+  lineItem: [{ position: 60, importance: #MEDIUM }],
+  identification: [{ position: 60 }], 
+  fieldGroup: [{qualifier: 'GeneralData2',position: 60,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Create on'
+  Createon;
+
+  @UI : {
+  lineItem: [{ position: 70, importance: #MEDIUM }],
+  identification: [{ position: 70 }], 
+  fieldGroup: [{qualifier: 'GeneralData2',position: 70,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Delivery date'
+  Deliverydate;
+
+  @UI : {
+  lineItem: [{ position: 80, importance: #MEDIUM }],
+  identification: [{ position: 80 }], 
+  fieldGroup: [{qualifier: 'GeneralData2',position: 80,importance: #HIGH }]
+  }
+  @EndUserText.label: 'Order status'
+  Orderstatus;
+
+}
